@@ -1,0 +1,93 @@
+#startmenu{
+  border: 1px solid;/*the startmenuborder*/
+}
+
+#game {
+  border: 1px solid Anime;/*The gameborder with an animation*/
+}
+
+button { /*Creates the button*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(90deg, rgb(22, 22, 38), rgb(20, 17, 41), rgb(14, 19, 36));/*Changes the shade for the background*/
+  background-size: 5000% 5000%;
+  animation: Anime 20s ease infinite;/*Adds the animation to the background*/
+  overflow: hidden;
+  cursor: none;
+}
+
+body.paused, body.notplaying, body.gameover {/*Sets the cursor to default if the game is paused (not corsair)*/
+  cursor: default;
+}
+
+@keyframes Anime {/*Changes the baclground position in a smooth transition as an animation*/
+  0% {background-position: 0% 50%;}
+  50% {background-position: 75% 0%;}
+  100% {background-position: 0% 50%;}
+}
+
+@font-face {
+  font-family: Arcade;
+  src: url();
+}
+
+img, audio {
+  display: none;
+}
+
+#pauseMenu, #gameOver, #mainMenu {/*Creates the static texts*/
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Press Start 2P', cursive;
+  color: rgb(255, 184, 0);
+  font-size: 50px;
+  display: none;
+}
+
+#pauseMenu p, #mainMenu p, #gameOver p {
+  float: left;
+  clear: both;
+  position: relative;
+  display: block;
+}
+
+#pauseMenu button, #mainMenu button, #gameOver button {/*Creates the button related to the text*/
+  float: left;
+  clear: both;
+  position: relative;
+  margin-bottom: 0px;
+  display: block;
+  border: 5px solid rgb(0, 19, 255);
+  border-radius: 0px;
+  background-color: rgb(0, 125, 139);
+  padding: 20px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 30px;
+}
+
+#pauseMenu button:hover, #mainMenu button:hover, #gameOver button:hover { /*Adds an effect if the player howers over the button*/
+  background-color: rgb(0, 229, 255);
+  box-shadow: 0px 0px 10px 3px rgba(0, 19, 255, 0.7) inset, 0px 0px 10px 3px rgba(0, 19, 255, 0.7);
+}
+
+
+body.gameover #gameOver {
+  display: inline-block;
+}
+
+body.notplaying #mainMenu {
+  display: inline-block;
+}
+
+body.paused #pauseMenu {
+  display: inline-block;
+}

@@ -1,20 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Gamedev Canvas Workshop</title>
-    <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
-    </style>
+  <meta charset="UTF-8">
+  <title>5p4c3-5h00t3r</title>
+  <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+  <audio src="./sounds/LaserSoundEffect.mp3" id="LaserSound"></audio>
+  <audio src="./sounds/WIISPORTSEARRAPE.mp3" id="EarRape"></audio>
+  <audio src="./sounds/MHA-ost1.mp3" id="BackgroundMusic"></audio>
+  <audio src="./sounds/Superboy.mp3" id="BackgroundMusicTwo"></audio>
+  <audio src="./sounds/Reload.mp3" id="reloadSound"></audio>
+  <audio src="./sounds/MenuSound.mp3" id="MenuSound"></audio>
+  <audio src="./sounds/BossCanon.mp3" id="BossCanon"></audio>
+  <audio src="./sounds/Powerup.mp3" id="Powerup"></audio>
+  <audio src="./sounds/Powerdown.mp3" id="Powerdown"></audio>
+  <audio src="./sounds/WIISPORTS8bit.mp3" id="PauseMusic"></audio>
+  <audio src="./sounds/RobloxDeathSound.mp3" id="DeathSound"></audio>
+  <audio src="./sounds/EXPLOSION8bit.mp3" id="boom"></audio>
+  <audio src="./sounds/GameOver.mp3" id="GameOver"></audio>
+  <audio src="./sounds/WIISPORTS8bit.mp3" id="End"></audio>
+  <audio src="./sounds/BossMusic1.mp3" id="bossmusic1"></audio>
+  <audio src="./sounds/BossExplosion.mp3" id="BossExplosion"></audio>
+  <audio src="./sounds/asteroidExplosion.mp3" id="asteroidExplosion"></audio>
+  <audio src="./sounds/chrash3.mp3" id="chrash3"></audio>
+  <audio src="./sounds/largeChrash.mp3" id="LargeChrash"></audio>
+  <audio src="./sounds/turn.mp3" id="turn"></audio>
+  <audio src="./sounds/BossLaser (1).mp3" id="BossLaser"></audio>
+  <audio src="./sounds/LaserBossBeam.mp3" id="LaserBossBeam"></audio>
+  <audio src="./sounds/Hit (1).mp3" id="HitSound"></audio>
+  <img src="./images/Boss.png" id="BigWheel">
+  <img src="./images/Enemyship.png" id="Enemyship"></img>
+  <img src="./images/Enemyship2.png" id="Enemyship2"></img>
+  <img src="./images/ship4.png" id="Enemyship3"></img>
+  <img src="./images/asteroid.png" id="asteroid"></img>
+  <img src="./images/ErikEnemy.jpg" id="Thonfors"></img>
+  <img src="./images/Crosshair2.png" id="crosshair"></img>
+  <img src="./images/beams.png" id="skott"></img>
+  <img src="./images/Beam2.png" id="skott2"></img>
+  <img src="./images/Beam3.png" id="skott3"></img>
+  <img src="./images/Beam4.png" id="skott4"></img>
+  <img src="./images/Beam5.png" id="skott5"></img>
+  <img src="./images/EnemyBeams2.png" id="fiendeskott"></img>
+  <img src="./images/ship.gif" id="ship"></img>
+  <img src="./images/ship3edited.png" id="Lena"></img>
+  <img src="./images/asteroid.png" id="Asteroid"></img>
+  <img src="./images/blueSquare.png" id="blueSquare"></img>
+  <img src="./images/greenSquare.png" id="greenSquare"></img>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" id="font">
 </head>
-<body>
-
-<canvas id="myCanvas" width="480" height="320"></canvas>
-
-<script>
-	// JavaScript kod här
-</script>
-
+<body class="notplaying">
+  <canvas id="startmenu"></canvas>
+  <canvas id="game"></canvas>
+  <script src="./js/gamecore.js"></script>
+  <script src="./js/Loaded images and audio.js"></script>
+  <script src="./js/UI.js"></script>
+  <script src="./js/player.js"></script>
+  <script src="./js/sprites.js"></script>
+  <script src="./js/input.js"></script>
+  <script src="./js/gamecanvas.js"></script>
+  <script>
+    backgroundLoop();
+  </script>
+  <div id="pauseMenu">
+    <p>G4M3 I5 P4U53D</p>
+    <button onclick="setPaused(false);" onmouseover="hoverSound()" onmouseup="pressSound()">R35UM3 G4M3</button>
+  </div>
+  <div id="mainMenu">
+    <p>G3T R34DY F0R Y0UR D00M</p>
+    <button onclick="startGame()">5T4RT G4M3</button>
+  </div>
+  <div id="gameOver">
+    <p id="gameOverTxt">G00D LUCK N3XT T1M3</p>
+    <button onclick="goToMainMenu()" onmouseover="hoverSound()" onmouseup="pressSound()">B4CK T0 M41N M3NU</button>
+  </div>
 </body>
 </html>
